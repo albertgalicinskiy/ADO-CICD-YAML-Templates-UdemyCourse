@@ -2,7 +2,7 @@ trigger:
 - master
 
 variables:
-  backendServiceArm: 'Visual Studio Professional Subscription(57403a3c-0cbd-4b93-b8ce-b8ebe863efb0)'
+  backendServiceArm: 'Visual Studio Professional Subscription (57403a3c-0cbd-4b93-b8ce-b8ebe863efb0)'
   backendAzureRmResourceGroupName: 'resourcegroup-devops-tfstate'
   backendAzureRmStorageAccountName: 'terraform0tfstate0'
   backendAzureRmContainerName: 'tfstate'
