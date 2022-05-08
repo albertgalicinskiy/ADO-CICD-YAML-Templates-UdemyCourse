@@ -24,7 +24,7 @@ stages:
 
     steps:
     
-    - task: TerraformInstaller@0
+    - task: ms-devlabs.custom-terraform-tasks.custom-terraform-installer-task.TerraformInstaller@0
       displayName: install Terraform v0.12.28
       inputs:
         terraformVersion: '0.12.28'
@@ -41,7 +41,7 @@ stages:
         backendAzureRmContainerName: ${{ parameters.backendAzureRmContainerName }}
         backendAzureRmKey: ${{ parameters.backendAzureRmKey }}
     
-    - task: TerraformTaskV1@0
+    - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV2@2
       displayName: terraform plan -var environment=${{ parameters.environment }} -out=${{ parameters.backendAzureRmKey }}
       inputs:
         provider: 'azurerm'
@@ -69,7 +69,7 @@ stages:
             Write-Host "There is no change detected in Terraform tfplan file"
           }
     
-    - task: TerraformTaskV1@0
+    - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV2@2
       displayName: terraform apply ${{ parameters.backendAzureRmKey }}
       condition: eq(variables.anyTfChanges, true)
       inputs:
