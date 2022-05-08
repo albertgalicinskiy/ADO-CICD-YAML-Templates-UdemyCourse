@@ -1,0 +1,24 @@
+trigger:
+- master
+
+variables:
+  backendServiceArm: 'AZURE_5_SUBSCRIPTION'
+  backendAzureRmResourceGroupName: 'resourcegroup-devops-tfstate'
+  backendAzureRmStorageAccountName: 'terraform0tfstate0'
+  backendAzureRmContainerName: 'tfstate'
+  location: 'westeurope'
+  tfBackendEnvironment: tf_backend
+  devEnvironment: dev
+  testEnvironment: test
+  prodEnvironment: prod
+  tfWorkingDirectory: 'terraform'
+
+stages:
+- template: sample-template-step.yml
+
+
+- template: sample-template-step.yml
+
+
+- template: sample-template-step.yml
+
