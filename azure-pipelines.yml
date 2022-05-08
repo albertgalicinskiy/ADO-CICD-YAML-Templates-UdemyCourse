@@ -4,8 +4,8 @@ trigger:
 variables:
   backendServiceArm: 'Visual Studio Professional Subscription (57403a3c-0cbd-4b93-b8ce-b8ebe863efb0)'
   backendAzureRmResourceGroupName: 'resourcegroup-devops-tfstate'
-  backendAzureRmStorageAccountName: 'terraformtfstate'
-  backendAzureRmContainerName: 'tfstate'
+  backendAzureRmStorageAccountName: 'udemyadocoursetfstate'
+  backendAzureRmContainerName: 'udemyadotfstate'
   location: 'westeurope'
   tfBackendEnvironment: tf_backend
   devEnvironment: dev
