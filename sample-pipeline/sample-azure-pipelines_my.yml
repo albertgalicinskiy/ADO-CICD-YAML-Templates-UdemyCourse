@@ -13,12 +13,10 @@ variables:
   prodEnvironment: prod
   tfWorkingDirectory: 'terraform'
 
-stages:
-- template: sample-template-step.yml
+steps:
+  - template: sample-template-step.yml
 
+  - template: sample-template-step.yml
 
-- template: sample-template-step.yml
-
-
-- template: sample-template-step.yml
+  - template: sample-template-step.yml
 
